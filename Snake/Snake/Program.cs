@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+
 
 namespace Snake
 {
@@ -10,30 +10,16 @@ namespace Snake
             Point p1 = new Point(1, 3, '*');            
             p1.Draw();            
             
-            Point p2 = new Point(4, 5, '#');            
+            Point p2 = new Point(2, 3, '#');            
             p2.Draw();
 
-            List<int> numList = new List<int>();
-            numList.Add(0);
-            numList.Add(1);
-            numList.Add(2);
+            HorizontalLine lineG = new HorizontalLine(4, 10, 8, '+');
+            lineG.Draw();
 
-            int x = numList[0];
-            int y = numList[1];
-            int z = numList[2];
-
-            foreach (int item in numList)
-            {
-                Console.WriteLine(item);
-            }
-
-            numList.Remove(0);
-
-            List<Point> pList = new List<Point>();
-            pList.Add(p1);
-            pList.Add(p2);                        
-
-        }
+            VerticalLine lineV = new VerticalLine(8, 15, 3, '|');
+            lineV.Draw();
+            
+        }       
 
     }
 }
